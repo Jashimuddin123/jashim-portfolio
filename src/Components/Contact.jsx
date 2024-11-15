@@ -1,4 +1,8 @@
-
+import EmailSent from "./EmailSent";
+import { FaFacebook } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { CiLinkedin } from "react-icons/ci";
+import { FaGithub } from "react-icons/fa";
 const Contact = () => {
     return (
      <div id="contact">
@@ -27,17 +31,18 @@ const Contact = () => {
               </div>
             </div>
             <div className="flex flex-col lg:flex-row gap-2">
-              <a href="#" className="text-blue-500">Facebook</a>
-              <a href="#" className="text-pink-500">Instagram</a>
-              <a href="#" className="text-blue-400">LinkedIn</a>
-              <a href="#" className="text-cyan-500">Twitter</a>
-              <a href="#" className="text-red-600">Pinterest</a>
+              <a href="https://www.facebook.com/mdjashimuddin.uddin.79" className="text-blue-500 text-2xl"><FaFacebook /></a>
+              <a href="https://www.instagram.com/ad.nan2770/" className="text-pink-500 text-2xl"><FaInstagram /></a>
+              <a href="https://www.linkedin.com/in/jashim-uddin-047a0b2b9/" className="text-blue-400 text-2xl"><CiLinkedin /></a>
+              {/* <a href="#" className="text-cyan-500">Twitter</a> */}
+              <a href="https://github.com/Jashimuddin123" className="text-gray-400 text-2xl"><FaGithub /></a>
             </div>
           </div>
     
           {/* Right Section */}
           <div className="flex-1 bg-teal-950 p-6 rounded-md">
-            <form className="space-y-4">
+            <EmailSent></EmailSent>
+            {/* <form className="space-y-4">
               <div className="flex gap-4">
                 <input
                   type="text"
@@ -75,7 +80,7 @@ const Contact = () => {
               <button type="submit" className="w-full p-2 bg-gradient-to-r from-green-400 to-blue-500 rounded-md text-white font-semibold">
                 Send message
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
      </div>

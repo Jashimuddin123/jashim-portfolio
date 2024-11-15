@@ -1,39 +1,56 @@
-// import { Link } from "react-router-dom";
-import { Link } from 'react-scroll'; 
+import { Link } from 'react-scroll';
+
 const Navbar = () => {
   const navlinks = (
     <>
-      <div>
-      <Link to="banner" smooth={true} duration={500} className="mr-4 text-xl text-white ">
-        Home
-      </Link>
-      <Link to="about" smooth={true} duration={500} className="mr-4 text-xl text-white ">
-        About
-      </Link>
-      <Link to="experience" smooth={true} duration={500} className="mr-4 text-xl text-white ">
-        Experience
-      </Link>
-      <Link to="skills" smooth={true} duration={500} className="mr-4 text-xl text-white ">
-        Skills
-      </Link>
-      <Link to="education" smooth={true} duration={500} className="mr-4 text-xl text-white ">
-        Education
-      </Link>
-      <Link to="contact" smooth={true} duration={500} className="mr-4 text-xl text-white ">
-        Contact
-      </Link>
-    </div>
+      <li>
+        <Link to="banner" smooth={true} duration={500} className="lg:text-white text-xl">
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link to="about" smooth={true} duration={500} className="lg:text-white text-xl">
+          About
+        </Link>
+      </li>
+      <li>
+        <Link to="experience" smooth={true} duration={500} className="lg:text-white text-xl">
+          Experience
+        </Link>
+      </li>
+      <li>
+        <Link to="skills" smooth={true} duration={500} className="lg:text-white text-xl">
+          Skills
+        </Link>
+      </li>
+      <li>
+        <Link to="education" smooth={true} duration={500} className="lg:text-white text-xl">
+          Education
+        </Link>
+      </li>
+      <li>
+        <Link to="contact" smooth={true} duration={500} className="lg:text-white text-xl">
+          Contact
+        </Link>
+      </li>
     </>
   );
 
   return (
-    <div className="navbar bg-teal-800 border-b-2 sticky top-0 z-50 ">
-      <div className="navbar">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+    <div className="navbar bg-teal-800 border-b-2 sticky top-0 z-50">
+      {/* Logo and Mobile Menu */}
+      <div className="navbar-start">
+        {/* Mobile Menu Dropdown */}
+        <div className="dropdown lg:hidden">
+          <button
+            tabIndex={0}
+            className="btn btn-ghost"
+            role="button"
+            aria-label="Mobile Menu Toggle"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -45,19 +62,23 @@ const Navbar = () => {
                 d="M4 6h16M4 12h8m-8 6h16"
               />
             </svg>
-          </div>
+          </button>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu dropdown-content mt-3 w-52 bg-base-100 p-2 shadow rounded-box z-[1]"
           >
             {navlinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">
+
+        {/* Logo */}
+        <a className="btn btn-ghost text-xl flex items-center">
           <span className="text-violet-950 text-3xl font-bold">Jashim</span>
           <span className="text-red-900 font-bold text-3xl">Uddin</span>
         </a>
       </div>
+
+      {/* Desktop Navigation */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navlinks}</ul>
       </div>
