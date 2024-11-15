@@ -4,22 +4,22 @@ const Navbar = () => {
   const navlinks = (
     <>
       <div>
-      <Link to="home" smooth={true} duration={500} className="mr-4 text-xl text-white font-semibold">
+      <Link to="banner" smooth={true} duration={500} className="mr-4 text-xl text-white ">
         Home
       </Link>
-      <Link to="about" smooth={true} duration={500} className="mr-4 text-xl text-white font-semibold">
+      <Link to="about" smooth={true} duration={500} className="mr-4 text-xl text-white ">
         About
       </Link>
-      <Link to="experience" smooth={true} duration={500} className="mr-4 text-xl text-white font-semibold">
+      <Link to="experience" smooth={true} duration={500} className="mr-4 text-xl text-white ">
         Experience
       </Link>
-      <Link to="skills" smooth={true} duration={500} className="mr-4 text-xl text-white font-semibold">
+      <Link to="skills" smooth={true} duration={500} className="mr-4 text-xl text-white ">
         Skills
       </Link>
-      <Link to="education" smooth={true} duration={500} className="mr-4 text-xl text-white font-semibold">
+      <Link to="education" smooth={true} duration={500} className="mr-4 text-xl text-white ">
         Education
       </Link>
-      <Link to="contact" smooth={true} duration={500} className="mr-4 text-xl text-white font-semibold">
+      <Link to="contact" smooth={true} duration={500} className="mr-4 text-xl text-white ">
         Contact
       </Link>
     </div>
@@ -27,7 +27,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-teal-800 border-b-2">
+    <div className="navbar bg-teal-800 border-b-2 sticky top-0 z-50 ">
       <div className="navbar">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

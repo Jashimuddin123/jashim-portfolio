@@ -11,7 +11,7 @@ import MySkills from "./MySkills";
 
 const Home = () => {
     return (
-        <div className="">
+        <div id="banner">
           <Banner></Banner>
            <AboutMe></AboutMe>
            <MyExperience></MyExperience>
